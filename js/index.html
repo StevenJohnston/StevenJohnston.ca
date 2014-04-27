@@ -1,0 +1,29 @@
+<html>
+	<head>
+	<script type ="text/javascript">
+	
+	</script>
+	<title>Steven Johnston</title>
+	<link rel="stylesheet" type="text/css" href="../style/main.css">
+	<script src="http://code.jquery.com/jquery-2.0.3.js"></script>
+	<script type ="text/javascript">
+		$(document).ready(function() {
+		$.ajax({
+        url: 'http://stevenjohnston.ca:3000/',
+        dataType: "jsonp",
+        jsonpCallback: "_testcb",
+        cache: false,
+        timeout: 5000,
+        success: function(data) {
+            console.log(data);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            alert('error ' + textStatus + " " + errorThrown);
+        }
+    });
+});
+	</script>
+	</head>
+	<body style="background-color:#222222">
+	</body>
+</html>
